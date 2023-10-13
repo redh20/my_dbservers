@@ -21,5 +21,5 @@
         
     - name: Ensure the samples database exists
         mysql_db:
-        name: samples
-        state: present
+          name: samples
+          state: present
