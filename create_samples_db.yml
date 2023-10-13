@@ -3,6 +3,7 @@
   hosts: all
   become: true
   gather_facts: false
+
   tasks:
     - name: Ensure MariaDB is installed
       yum:
@@ -12,13 +13,13 @@
           - python3-PyMySQL
         state: present
         
-   - name: Ensure the mariadb service is started and enabled
-     systemd:
-       name: mariadb
-       state: started
-      enabled: true
+    - name: Ensure the mariadb service is started and enabled
+      systemd:
+        name: mariadb
+        state: started
+        enabled: true
         
-   - name: Ensure the samples database exists
-       mysql_db:
-       name: samples
-       state: present
+    - name: Ensure the samples database exists
+        mysql_db:
+        name: samples
+        state: present
