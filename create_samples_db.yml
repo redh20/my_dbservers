@@ -19,7 +19,7 @@
         state: started
         enabled: true
         
-    - name: Ensure the samples database exists
-      mysql_db:
-        name: samples
-        state: present
+  #  - name: Ensure the samples database exists
+   #   mysql_db:
+    #    name: samples
+     #   state: present
